@@ -1295,7 +1295,7 @@ var draw = function() {
         fill(0, 0, 0);
         text("Back", 25, 25);
 //         gMan.move();
-//         gMan.draw();
+         gMan.draw();
         displayTilemap();
 
         
