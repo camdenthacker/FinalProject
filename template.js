@@ -744,9 +744,9 @@ var displayTilemap = function() {
             image(images[6],coins[i].x,coins[i].y,20,20); 
         }
     }
-    for(var i = 0; i <fountains.length; i++){
-        fountains[i].execute();
-    }
+//     for(var i = 0; i <fountains.length; i++){
+//         fountains[i].execute();
+//     }
 
     
     
@@ -1294,9 +1294,9 @@ var draw = function() {
         rect(5,5,75,30);
         fill(0, 0, 0);
         text("Back", 25, 25);
-//         gMan.move();
-//         gMan.draw();
-//         displayTilemap();
+        gMan.move();
+        gMan.draw();
+        displayTilemap();
 
         
         if (gMan.lives <= 0){
