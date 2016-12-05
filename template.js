@@ -1296,7 +1296,7 @@ var draw = function() {
         text("Back", 25, 25);
         gMan.move();
         gMan.draw();
-        displayTilemap();
+        //displayTilemap();
 
         
         if (gMan.lives <= 0){
