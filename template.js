@@ -1299,34 +1299,34 @@ var draw = function() {
         displayTilemap();
 
         
-//         if (gMan.lives <= 0){
-//             start = 10;
-//             level = 0;
-//             gMan.g = 1;
-//             coinCount = 0;
-//         }
-//         if (gMan.levelComplete === 1){
-//              gMan.levelComplete = 0;
-//              if (level < 5){
-//                  level++; //increase level when you complete previous level
-//                  initializeTilemap();
-//                  gMan.g = 1;
-//                  //gMan.restartLevel();
-//              }
-//              else{
-//                  background(217, 208, 217);
-//                  level = 0;
-//                  start = 10; //restart game when you win YEET
-//                  coinCount = 0;
-//                  //gMan.restartLevel();
-//                  gMan.g = 1;
-//                  gMan.lives = 3;
-//              }
-//         }
-//         if (gMan.collided === 1){//gMan.gravFrame < (frameCount - 4)) {
-//             //gMan.gravFrame = frameCount;
-//             gMan.checkGravity();
-//         }
+        if (gMan.lives <= 0){
+            start = 10;
+            level = 0;
+            gMan.g = 1;
+            coinCount = 0;
+        }
+        if (gMan.levelComplete === 1){
+             gMan.levelComplete = 0;
+             if (level < 5){
+                 level++; //increase level when you complete previous level
+                 initializeTilemap();
+                 gMan.g = 1;
+                 //gMan.restartLevel();
+             }
+             else{
+                 background(217, 208, 217);
+                 level = 0;
+                 start = 10; //restart game when you win YEET
+                 coinCount = 0;
+                 //gMan.restartLevel();
+                 gMan.g = 1;
+                 gMan.lives = 3;
+             }
+        }
+        if (gMan.collided === 1){//gMan.gravFrame < (frameCount - 4)) {
+            //gMan.gravFrame = frameCount;
+            gMan.checkGravity();
+        }
         
         
     }
