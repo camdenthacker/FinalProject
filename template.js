@@ -6,6 +6,7 @@ frameRate(60);
 //ProgramCodeGoesHere
 //START OF FILE
 
+
 /**
  * ECE 4525: Final Project
  * Author: Camden Thacker
@@ -17,48 +18,136 @@ frameRate(60);
 angleMode = "radians";
 
 var tilemap1 = [ //LEVEL 1
-        "                                                                                ",
-        "                                                                                ",
-        "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllbbbbbbbbbbbbbbbbbbbb",
-        "                                                                                ",
-        "                                                                                ",
-        "                                                                               b",
-        "                                b                                               ",
-        "                                                                                ",
-        "                                                                                ",
-        "                                                                                ",
-        "                                                                                ",
-        "                                                                                ",
-        "                                                                                ",
-        "                                                 bbbbb                          ",
-        "                                                 bbbbb                          ",
-        "  bb                              b            bbbbbbbbb                        ",
-        "                          b                    bbbbbbbbb                      ff",
-        "                     b                       bbbbbbbbbbbbb                    ff",
-        "                                             bbbbbbbbbbbbb                    ff",
-        "bbbbllllllllllllbbbllllllllllllllllllllllllllbbbbbbbbbbbbbllllllllllllllllllllbb"];
+    "                                                                                ",
+    "                                                                                ",
+    "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllbbbbbbbbbbbbbbbbbbbb",
+    "bb                                                                 ccc         c",
+    "c                                                                               ",
+    "c                                                                              b",
+    "c                               b                                              c",
+    "c    c                          c                                              c",
+    "c                                                                               ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                  cc                            ",
+    "                                                 bbbbb                          ",
+    "                                                 bbbbb                          ",
+    "  bb                              b            bbbbbbbbb                        ",
+    "                          b                    bbbbbbbbb                      ff",
+    "                     b                       bbbbbbbbbbbbb                    ff",
+    "      p     p           p      p             bbbbbbbbbbbbb   p     p          ff",
+    "bbbbllllllllllllbbbllllllllllllllllllllllllllbbbbbbbbbbbbbllllllllllllllllllllbb"];
         
 var tilemap2 = [ //LEVEL 2
-        "                                                                                ",
-        "                                                                                ",
-        "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
-        "                                                                                ",
-        "                  bb                                 bbbbbb                     ",
-        "                                                                                ",
-        "                            bbb                                                 ",
-        "                                           bb                                   ",
-        "                                                                                ",
-        "                                                                                ",
-        "                                                             bbbbbb             ",
-        "                                                                                ",
-        "                                                           bb        bbbb       ",
-        "                                                                                ",
-        "           bbb                                                                  ",
-        "                                                       bb                       ",
-        "                                                                              ff",
-        "       bb                          bbbbbbb                                    ff",
-        "                                                                              ff",
-        "bbbbllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllbb"];
+    "                                                                                ",
+    "                                                                                ",
+    "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
+    "                                                                                ",
+    "                  bb                                 bbbbbb                     ",
+    "                                                                                ",
+    "                            bbb                                                 ",
+    "                                           bb              c                    ",
+    "                                                                           cccc ",
+    "                                                                                ",
+    "                                                             bbbbbb             ",
+    "                                                                                ",
+    "                                        c                  bb        bbbb       ",
+    "            c                                                                   ",
+    "           bbb                                         cc                       ",
+    "                                                       bb                       ",
+    "                                                                              ff",
+    "       bb                          bbbbbbb                                    ff",
+    "            p         p               p               p    p              p   ff",
+    "bbbbllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllbb"];
+
+var tilemap3 = [ //LEVEL 3
+    "                                                                                ",
+    "                                                                                ",
+    "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllbbbbbbbbbbbb",
+    "                                   l bb       bbb              bb               ",
+    "      bbbb         bb              l cc              bbbbbb                     ",
+    "                                   l cc                                         ",
+    "               b            bbb    l cc                              c          ",
+    "                                                         c           c          ",
+    "                                                                       c        ",
+    "                                                                       c        ",
+    "                                                                       c        ",
+    "                                                                          c     ",
+    "                                        c                                       ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                                                ",
+    "        c                            cccc                                     ff",
+    "       bb                            bbbb                                     ff",
+    " c       p                    p                       p              p        ff",
+    "bbblllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllbbbb"];
+
+var tilemap4 = [ //LEVEL 4
+    "                                                                                ",
+    "                                                                                ",
+    "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
+    "                                                     bbbbbbb                    ",
+    "                  bb                                                            ",
+    "                  c                                                             ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                             c               c                  ",
+    "                           bbbbbbbbbb        bb                                 ",
+    "                 bb         cccccc                                             c",
+    "                                                                               c",
+    "            c                                                                  c",
+    "           bbb                                                                  ",
+    "                                                                 bbbbb          ",
+    "        cc                                                                    ff",
+    "       bb                       bbb                                           ff",
+    "                                   bbbbb                                      ff",
+    "bbbbbbbblllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllbbbbb"];
+
+var tilemap5 = [ //LEVEL 5
+    "                                                                                ",
+    "                                                                                ",
+    "llllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllll",
+    "     bbbb                                                                       ",
+    "                  bb                           bbbbb bbbbbb                     ",
+    "c                 c                                                             ",
+    "c                                                                               ", 
+    "c                                                     c                         ",
+    "                           bbbb                                          cccc   ",
+    "                                     bbb                       ccc              ",
+    "                                                             bbbbbb             ",
+    "                                                               ccc              ",
+    "                                        c                  bb        bbbb       ",
+    "            c                                                                   ",
+    "           bbb                                                                  ",
+    "c              p                                                                ",
+    "            lllllllbbb                                                        ff",
+    "       bbllllllllllllbbbbb          bbbbbbb                                   ff",
+    "       llllllllllllllllllbbbb p                      p bbbb             p     ff",
+    "bbbblllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllllbbb"];
+
+var tilemap6 = [ //Finish Screen
+    "                                                                                ",
+    "                                                                                ",
+    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                                                ",
+    "   b                           b                                                ",
+    "                                                                                ",
+    "           b       b     b          b                   b            b          ",
+    "                                                                                ",
+    "                               b           b                                    ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                                                ",
+    "                                                                              ff",
+    "                                                                              ff",
+    "                                                                              ff",
+    "bbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb"];
 
 var gameOver = 0; //stages of the game
 var start = 10; //Determines what screen the game is on
@@ -277,6 +366,21 @@ var customChar = function() {
     ellipse(170,105,20,20);//eye
     ellipse(165,140,20,5);//mouth
     images.push(get(0,0,width,height));
+
+    //Coins
+    noStroke();
+    background(255, 255, 255);
+    background(255, 255, 255,0);       // set background of the custom char
+    fill(133,87,7);
+    ellipse(200,200,400,400);
+    noFill();
+    stroke(133, 87, 7);
+    fill(214, 180, 11);
+    stroke(0, 0, 0);
+    strokeWeight(10);
+    ellipse(200,200,300,300);
+    images.push(get(0,0,width,height));
+    noStroke();
     
     
     start = 0;
@@ -375,10 +479,86 @@ var finishObj = function(x,y){
     this.y = y;
 };
 
+var coinObj = function(x,y){
+    this.x = x;
+    this.y = y;
+    this.isCollected = 0;
+    
+};
+
+//LAVA FOUNTAIN STUFF
+// Systems of particle systems
+// this.particles point to objects of particles
+
+var monteCarlo = function() {
+    var v1 = random(220, 255);
+    var v2 = random(220, 255);
+    while (v2 > v1) {
+        v1 = random(220, 255);
+        v2 = random(220, 255);
+    }
+    return(v1);
+};
+
+var particleObj = function(x, y) {
+    this.position = new PVector(x, y);
+    this.velocity = new PVector(random(-0.3, 0.3), random(-0.5, -0.9));
+    this.size = random(2, 4);
+    this.position.y -= (18 - this.size);
+    this.c1 = monteCarlo();
+    this.timeLeft = 255;
+};
+
+var fountainObj = function(x, y) {
+    this.x = x;
+    this.y = y;
+    this.particles = [];
+};
+
+var gravityP = new PVector(0, 0.02);
+var fountains = [];
+
+particleObj.prototype.move = function() {
+    this.velocity.add(gravityP);
+    this.position.add(this.velocity);
+    this.timeLeft--;
+};
+
+particleObj.prototype.draw = function() {
+    noStroke();
+    //fill(this.c1, this.c1, this.c1, this.timeLeft);
+    fill(255,0,0,this.timeLeft);
+    ellipse(this.position.x, this.position.y, this.size, this.size*2);
+};
+
+fountainObj.prototype.execute = function() {
+    if (this.particles.length < 5) {
+        this.particles.push(new particleObj(this.x, this.y));
+        this.particles.push(new particleObj(this.x, this.y));
+        this.particles.push(new particleObj(this.x, this.y));
+    }
+    for (var i=0; i<this.particles.length; i++) {
+        if ((this.particles[i].timeLeft > 0) && 
+            (this.particles[i].position.y < this.y)) {
+            this.particles[i].draw();
+            this.particles[i].move();
+        }
+        else {
+            this.particles.splice(i, 1);
+        }
+    } 
+    //fill(240, 240, 240);
+    //ellipse(this.x, this.y-9, 60, 10);
+};
+
+//END OF LAVA FOUNTAIN STUFF
+
+var coinCount = 0;
 var initialized = 0; //used to determine which map has been initialized
 var walls = [];
 var lava = [];
 var finish = [];
+var coins = [];
 var initializeTilemap = function () {
     
     //if (initialized === 0){
@@ -386,6 +566,8 @@ var initializeTilemap = function () {
         walls = [];
         lava = [];
         finish = [];
+        coins = [];
+        fountains = [];
         for (var i=0; i<tilemap1.length; i++) {
             for (var j=0; j<tilemap1[i].length; j++) {
                 if (tilemap1[i][j] === 'b') {
@@ -397,6 +579,12 @@ var initializeTilemap = function () {
                 if (tilemap1[i][j] === 'f') {
                     finish.push(new finishObj(j*20, i*20));
                 }
+                if (tilemap1[i][j] === 'c') {
+                    coins.push(new coinObj(j*20, i*20));
+                }
+                if (tilemap1[i][j] === 'p') {
+                    fountains.push(new fountainObj(j*20, i*20+35));
+                }
             }
         }
     }
@@ -404,6 +592,8 @@ var initializeTilemap = function () {
         walls = [];
         lava = [];
         finish = [];
+        coins = [];
+        fountains = [];
         for (var i=0; i<tilemap2.length; i++) {
             for (var j=0; j<tilemap2[i].length; j++) {
                 if (tilemap2[i][j] === 'b') {
@@ -414,6 +604,116 @@ var initializeTilemap = function () {
                 }
                 if (tilemap2[i][j] === 'f') {
                     finish.push(new finishObj(j*20, i*20));
+                }
+                if (tilemap2[i][j] === 'c') {
+                    coins.push(new coinObj(j*20, i*20));
+                }
+                if (tilemap2[i][j] === 'p') {
+                    fountains.push(new fountainObj(j*20, i*20+35));
+                }
+            }
+        }
+    }
+    else if(level === 2){
+        walls = [];
+        lava = [];
+        finish = [];
+        coins = [];
+        fountains = [];
+        for (var i=0; i<tilemap3.length; i++) {
+            for (var j=0; j<tilemap3[i].length; j++) {
+                if (tilemap3[i][j] === 'b') {
+                    walls.push(new wallObj(j*20, i*20));
+                }
+                if (tilemap3[i][j] === 'l') {
+                    lava.push(new lavaObj(j*20, i*20));
+                }
+                if (tilemap3[i][j] === 'f') {
+                    finish.push(new finishObj(j*20, i*20));
+                }
+                if (tilemap3[i][j] === 'c') {
+                    coins.push(new coinObj(j*20, i*20));
+                }
+                if (tilemap3[i][j] === 'p') {
+                    fountains.push(new fountainObj(j*20, i*20+35));
+                }
+            }
+        }
+    }
+    else if(level === 3){
+        walls = [];
+        lava = [];
+        finish = [];
+        coins = [];
+        fountains = [];
+        for (var i=0; i<tilemap4.length; i++) {
+            for (var j=0; j<tilemap4[i].length; j++) {
+                if (tilemap4[i][j] === 'b') {
+                    walls.push(new wallObj(j*20, i*20));
+                }
+                if (tilemap4[i][j] === 'l') {
+                    lava.push(new lavaObj(j*20, i*20));
+                }
+                if (tilemap4[i][j] === 'f') {
+                    finish.push(new finishObj(j*20, i*20));
+                }
+                if (tilemap4[i][j] === 'c') {
+                    coins.push(new coinObj(j*20, i*20));
+                }
+                if (tilemap4[i][j] === 'p') {
+                    fountains.push(new fountainObj(j*20, i*20+35));
+                }
+            }
+        }
+    }
+    else if(level === 4){
+        walls = [];
+        lava = [];
+        finish = [];
+        coins = [];
+        fountains = [];
+        for (var i=0; i<tilemap5.length; i++) {
+            for (var j=0; j<tilemap5[i].length; j++) {
+                if (tilemap5[i][j] === 'b') {
+                    walls.push(new wallObj(j*20, i*20));
+                }
+                if (tilemap5[i][j] === 'l') {
+                    lava.push(new lavaObj(j*20, i*20));
+                }
+                if (tilemap5[i][j] === 'f') {
+                    finish.push(new finishObj(j*20, i*20));
+                }
+                if (tilemap5[i][j] === 'c') {
+                    coins.push(new coinObj(j*20, i*20));
+                }
+                if (tilemap5[i][j] === 'p') {
+                    fountains.push(new fountainObj(j*20, i*20+35));
+                }
+            }
+        }
+    }
+    else if(level === 5){ //finishing screen: YOU WIN
+        walls = [];
+        lava = [];
+        finish = [];
+        coins = [];
+        fountains = [];
+        for (var i=0; i<tilemap6.length; i++) {
+            for (var j=0; j<tilemap6[i].length; j++) {
+                if (tilemap6[i][j] === 'b') {
+                    walls.push(new wallObj(j*20, i*20));
+                }
+                if (tilemap6[i][j] === 'l') {
+                    lava.push(new lavaObj(j*20, i*20));
+                }
+                if (tilemap6[i][j] === 'f') {
+                    finish.push(new finishObj(j*20, i*20));
+                }
+                if (tilemap6[i][j] === 'c') {
+                    coins.push(new coinObj(j*20, i*20));
+                }
+                if (tilemap6[i][j] === 'p') {
+                    fountains.push(new fountainObj(j*20, i*20+35));
                 }
             }
         }
@@ -439,6 +739,15 @@ var displayTilemap = function() {
         rect(finish[i].x, finish[i].y, 20, 20);
     }
     fill(255, 0, 0);
+    for(var i = 0; i <coins.length; i++){
+        if (coins[i].isCollected === 0){
+            image(images[6],coins[i].x,coins[i].y,20,20); 
+        }
+    }
+    for(var i = 0; i <fountains.length; i++){
+        fountains[i].execute();
+    }
+
     
     
 };
@@ -448,7 +757,7 @@ var displayTilemap = function() {
 
 //End of TileMap Creation
 
- //GMAN Object CREATION
+//GMAN Object CREATION
 
 var GManObj = function(x,y){
     this.position = new PVector(x,y);
@@ -540,7 +849,7 @@ var keyReleased = function() {
 
 GManObj.prototype.checkGravity = function(){
     
-    if (keyPressed && keys[71]){ //keyIsPressed
+    if (keyIsPressed && keys[71]){
         this.g *= -1;
         
         if (this.g === 1){
@@ -561,7 +870,7 @@ GManObj.prototype.move = function(){
     this.centerScreen();
 
     
-    if (keyPressed && keys[LEFT]) { //this checks if left arrow is pressed //keyIsPressed
+    if (keyIsPressed && keys[LEFT]) { //this checks if left arrow is pressed
         //this.collidedX();
         //if(this.collideX === 0){
         for (var i = 0; i < walls.length; i++){
@@ -614,7 +923,7 @@ GManObj.prototype.move = function(){
         this.collideXL = 0;
         //}
     }
-    if (keyPressed && keys[RIGHT]) { //this checks if right arrow is pressed
+    if (keyIsPressed && keys[RIGHT]) { //this checks if right arrow is pressed
 
         for (var i = 0; i < walls.length; i++){
             if (this.g === 1){
@@ -663,7 +972,7 @@ GManObj.prototype.move = function(){
         //END OF CHECK FOR END OF LEVEL
         this.collideXR = 0;
     } 
-    if (keyPressed && keys[32] && this.jump === 0){ //needs work
+    if (keyIsPressed && keys[32] && this.jump === 0){ //needs work
         
         this.jump = 2;
     }
@@ -697,6 +1006,18 @@ GManObj.prototype.move = function(){
             this.angle = 0;
             this.velocity.set(0,0);
             this.restartLevel();
+            
+        }
+    }
+
+    //USED FOR WHEN YOU HIT COINS
+    for (var i = 0; i < coins.length; i++){
+        var distance = dist(this.position.x, this.position.y-10, coins[i].x+10, coins[i].y);
+        if (distance < 25 && coins[i].isCollected === 0){
+            this.collideCoin = 1;
+            //this.collided = 1;
+            coinCount++;
+            coins[i].isCollected = 1;
             
         }
     }
@@ -816,7 +1137,7 @@ GManObj.prototype.draw = function() {
     popMatrix();
 
     //used for animations
-    if(keyPressed && keys[RIGHT] && this.g === 1 || keyPressed && keys[LEFT] && this.g === -1){
+    if(keyIsPressed && keys[RIGHT] && this.g === 1 || keyIsPressed && keys[LEFT] && this.g === -1){
         if(this.i > 3){
             this.i = 0;
         }
@@ -828,7 +1149,7 @@ GManObj.prototype.draw = function() {
             }
         }
     }
-    else if(keyPressed && keys[LEFT] && this.g === 1 || keyPressed && keys[RIGHT] && this.g === -1){
+    else if(keyIsPressed && keys[LEFT] && this.g === 1 || keyIsPressed && keys[RIGHT] && this.g === -1){
         if(this.i < 4){
             this.i = 4;
         }
@@ -842,7 +1163,7 @@ GManObj.prototype.draw = function() {
     }
 };
 
-//END OF GMAN DEFINITION 
+//END OF GMAN DEFINITION
 
 
 
@@ -872,6 +1193,40 @@ var mouseClicked = function() {
 
 var introGMan = new introGManObj(20,350);
 var gMan = new GManObj(20,380);
+var randX = [];
+var randY = [];
+var sizes = [];
+var balls = [];
+
+
+var gravBallObj = function(x,y,size){
+    this.x = 200;
+    this.y = 100;
+    this.size = size;
+    this.vx = x;
+    this.vy = y;
+};
+
+gravBallObj.prototype.draw = function() {
+    this.x += this.vx;
+    this.y += this.vy;
+    
+    if (this.x+this.size/2 > 400 || this.x -this.size/2 < 0){
+        this.vx *= -1;   
+    }
+    if (this.y + this.size/2 > 400 || this.y - this.size/2 < 0){
+        this.vy *= -1;   
+    }
+    ellipse(this.x,this.y,this.size,this.size);
+};
+
+for (var i = 0; i < 10; i++){
+    randX.push(random(-0.8,0.8));
+    randY.push(random(-0.8,0.8));
+    sizes.push(random(20,75));
+    balls.push(new gravBallObj(randX[i],randY[i],sizes[i]));
+    
+}
 
 var draw = function() {
     if (start === 10){ //preprocessing
@@ -886,6 +1241,10 @@ var draw = function() {
         background(217, 208, 217);
         introGMan.draw();
         introGMan.move();
+        fill(89, 80, 80);
+        for(var i = 0; i < 10; i++){
+            balls[i].draw();   
+        }
         
         if (gMan.lives === 0){ //for when the game restarts
             gMan.lives = 3;
@@ -925,9 +1284,12 @@ var draw = function() {
     }
     else if(start === 2){ //play game
         background(217, 208, 217);
-        text("Work in Progress!", 135, 200);
+        if (level === 5){
+            text("                                      You win! \nRun to the end of this map to return to the intro screen.", 25, 80);
+        }
         text("Number of Lives: " + gMan.lives,250,15);
         text("Gravity Setting: " + gMan.g, 260,35);
+        text("Coin Count: " + coinCount, 100,35);
         fill(255, 0, 0,40);
         rect(5,5,75,30);
         fill(0, 0, 0);
@@ -941,18 +1303,21 @@ var draw = function() {
             start = 10;
             level = 0;
             gMan.g = 1;
+            coinCount = 0;
         }
         if (gMan.levelComplete === 1){
              gMan.levelComplete = 0;
-             if (level < 1){
+             if (level < 5){
                  level++; //increase level when you complete previous level
                  initializeTilemap();
                  gMan.g = 1;
                  //gMan.restartLevel();
              }
              else{
+                 background(217, 208, 217);
                  level = 0;
-                 start = 10; //restart game when you win
+                 start = 10; //restart game when you win YEET
+                 coinCount = 0;
                  //gMan.restartLevel();
                  gMan.g = 1;
                  gMan.lives = 3;
