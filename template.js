@@ -849,7 +849,7 @@ var keyReleased = function() {
 
 GManObj.prototype.checkGravity = function(){
     
-    if (keyIsPressed && keys[71]){
+    if (keyPressed && keys[71]){
         this.g *= -1;
         
         if (this.g === 1){
@@ -870,7 +870,7 @@ GManObj.prototype.move = function(){
     this.centerScreen();
 
     
-    if (keyIsPressed && keys[LEFT]) { //this checks if left arrow is pressed
+    if (keyPressed && keys[LEFT]) { //this checks if left arrow is pressed
         //this.collidedX();
         //if(this.collideX === 0){
         for (var i = 0; i < walls.length; i++){
@@ -923,7 +923,7 @@ GManObj.prototype.move = function(){
         this.collideXL = 0;
         //}
     }
-    if (keyIsPressed && keys[RIGHT]) { //this checks if right arrow is pressed
+    if (keyPressed && keys[RIGHT]) { //this checks if right arrow is pressed
 
         for (var i = 0; i < walls.length; i++){
             if (this.g === 1){
@@ -972,7 +972,7 @@ GManObj.prototype.move = function(){
         //END OF CHECK FOR END OF LEVEL
         this.collideXR = 0;
     } 
-    if (keyIsPressed && keys[32] && this.jump === 0){ //needs work
+    if (keyPressed && keys[32] && this.jump === 0){ //needs work
         
         this.jump = 2;
     }
@@ -1137,7 +1137,7 @@ GManObj.prototype.draw = function() {
     popMatrix();
 
     //used for animations
-    if(keyIsPressed && keys[RIGHT] && this.g === 1 || keyIsPressed && keys[LEFT] && this.g === -1){
+    if(keyPressed && keys[RIGHT] && this.g === 1 || keyPressed && keys[LEFT] && this.g === -1){
         if(this.i > 3){
             this.i = 0;
         }
@@ -1149,7 +1149,7 @@ GManObj.prototype.draw = function() {
             }
         }
     }
-    else if(keyIsPressed && keys[LEFT] && this.g === 1 || keyIsPressed && keys[RIGHT] && this.g === -1){
+    else if(keyPressed && keys[LEFT] && this.g === 1 || keyPressed && keys[RIGHT] && this.g === -1){
         if(this.i < 4){
             this.i = 4;
         }
@@ -1294,8 +1294,8 @@ var draw = function() {
         rect(5,5,75,30);
         fill(0, 0, 0);
         text("Back", 25, 25);
-//         gMan.move();
-         gMan.draw();
+        gMan.move();
+        gMan.draw();
         displayTilemap();
 
         
