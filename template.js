@@ -1485,7 +1485,7 @@ var draw = function() {
         textSize(30);
         text("Instructions", 120, 100);
         textSize(15);
-        var intro = "  Move your character throughout the levels, gathering \n    coins and killing enemies. You can kill enemies by \n  jumping on top of them. In order to beat the game, you \n    will need to utilize your character's ability to reverse \ngravity. You are given 3 lives to complete all of the levels. \n                                    Good luck!  ";
+        var intro = "  Move your character throughout the levels, gathering \n  coins and avoiding the lava. In order to beat the game,\n you will need to utilize your character's ability to reverse \ngravity. You are given 3 lives to complete all of the levels. \n                                    Good luck!  ";
         var keyInputs = "Left Arrow = move left \n\nRight Arrow = move right \n\nSpace Bar = jump \n\nG = change gravity direction";
         textSize(15);
         text(intro, 20, 130);
